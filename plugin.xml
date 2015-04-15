@@ -7,17 +7,16 @@
     <name>RefreshGalleryPlugin</name>
     <author>Guilherme Natal de Mello</author>
 
+    <js-module src="www/pluginRefreshGallery.js" name="pluginRefreshGallery">
+      <clobbers target="pluginRefreshGallery" />
+    </js-module>
+
     <!-- android -->
     <platform name="android">
 
       <!-- java file -->
       <source-file src="src/android/com/guinatal/refreshgallery/pluginRefreshGallery.java"
         target-dir="src/com/guinatal/refreshgallery" />
-
-      <!-- javascript file -->
-      <js-module src="www/pluginRefreshGallery.js" name="pluginRefreshGallery">
-        <clobbers target="pluginRefreshGallery" />
-      </js-module>
 
       <!-- config -->
       <config-file target="AndroidManifest.xml" parent="/manifest/application">
