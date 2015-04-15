@@ -1,18 +1,16 @@
 // Plugin Refresh Gallery - Android
-;(function(){
-	var refreshMedia = function() {};
+var refreshMedia = function() {};
 
-	refreshMedia.refresh = function(url) {
-		var exec = require("cordova/exec");
-		exec(success, error, "pluginRefreshGallery", "refresh", [url]);
-	};
+refreshMedia.refresh = function(url) {
+	alert("chegou");
+	var exec = require("cordova/exec");
+	exec(success, error, "PluginRefreshGallery", "refresh", [url]);
+};
 
-	var success = function(){
-		alert("Success");
-	},
+var success = function(){
+	alert("Success");
+},
 
-	error = function(){
-		alert("Error");
-	};
-
-})();
+error = function(){
+	alert("Error");
+};
