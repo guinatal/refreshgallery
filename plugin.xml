@@ -6,6 +6,7 @@
 
     <name>RefreshGalleryPlugin</name>
     <author>Guilherme Natal de Mello</author>
+    <description>This plugin was made to refresh the gallery on android device.</description>
 
     <js-module src="www/pluginRefreshGallery.js" name="pluginRefreshGallery">
       <clobbers target="pluginRefreshGallery" />
