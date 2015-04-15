@@ -16,7 +16,7 @@
     <platform name="android">
 
       <!-- java file -->
-      <source-file src="src/android/com/guinatal/refreshgallery/pluginRefreshGallery.java"
+      <source-file src="src/android/com/guinatal/refreshgallery/PluginRefreshGallery.java"
         target-dir="src/com/guinatal/refreshgallery" />
 
       <!-- config -->
