@@ -32,7 +32,7 @@ import org.apache.cordova.*;
 
 /**
  * @author Guilherme Natal de Mello (guinatal.com)
- * 
+ *
  */
 
 public class PluginRefreshGallery extends CordovaPlugin {
@@ -48,6 +48,7 @@ public class PluginRefreshGallery extends CordovaPlugin {
      * @return                  A PluginResult object with a status and message.
      */
 
+  @Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
         this.callbackContext = callbackContext;
