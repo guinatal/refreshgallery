@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
 */
-package nl.xservices.plugins;
+package com.guinatal.refreshgallery;
 
 import java.io.File;
 
