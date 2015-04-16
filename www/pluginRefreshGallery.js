@@ -6,16 +6,18 @@
 	};
 
 	RefreshMedia.prototype.refresh = function(url) {
-		alert("chegou");
+		alert(url);
 		exec(success, error, "PluginRefreshGallery", "refresh", [url]);
 	};
 
-	var success = function(){
+	var success = function(success){
 		alert("Success");
+		alert(success);
 	},
 
-	error = function(){
+	error = function(error){
 		alert("Error");
+		alert(error);
 	};
 
 	window.refreshMedia = new RefreshMedia();
