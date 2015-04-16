@@ -1,16 +1,22 @@
-// Plugin Refresh Gallery - Android
-var refreshMedia = function() {};
-
-refreshMedia.refresh = function(url) {
-	alert("chegou");
+;(function(){
 	var exec = require("cordova/exec");
-	exec(success, error, "PluginRefreshGallery", "refresh", [url]);
-};
 
-var success = function(){
-	alert("Success");
-},
+	// Plugin Refresh Gallery - Android
+	var RefreshMedia = function() {
+	};
 
-error = function(){
-	alert("Error");
-};
+	RefreshMedia.prototype.refresh = function(url) {
+		alert("chegou");
+		exec(success, error, "PluginRefreshGallery", "refresh", [url]);
+	};
+
+	var success = function(){
+		alert("Success");
+	},
+
+	error = function(){
+		alert("Error");
+	};
+
+	window.refreshMedia = new RefreshMedia();
+})();
