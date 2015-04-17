@@ -19,15 +19,12 @@
 package com.guinatal.refreshgallery;
 
 import java.io.File;
-
 import org.apache.cordova.CallbackContext;
 import org.json.JSONArray;
 import org.json.JSONException;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-
 import org.apache.cordova.*;
 
 /**
@@ -37,21 +34,20 @@ import org.apache.cordova.*;
 
 public class PluginRefreshGallery extends CordovaPlugin {
 
-    public CallbackContext callbackContext;
-
-    /**
-     * Executes the request and returns PluginResult.
-     *
-     * @param action            The action to execute.
-     * @param args              JSONArry of arguments for the plugin.
-     * @param callbackContext   The callback id used when calling back into JavaScript.
-     * @return                  A PluginResult object with a status and message.
-     */
+  public CallbackContext callbackContext;
+  /**
+   * Executes the request and returns PluginResult.
+   *
+   * @param action            The action to execute.
+   * @param args              JSONArry of arguments for the plugin.
+   * @param callbackContext   The callback id used when calling back into JavaScript.
+   * @return                  A PluginResult object with a status and message.
+   */
 
   @Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) {
 
-        this.callbackContext = callbackContext;
+    this.callbackContext = callbackContext;
 
 		try {
 
@@ -60,47 +56,50 @@ public class PluginRefreshGallery extends CordovaPlugin {
 				String filePath = checkFilePath(args.getString(0));
 
 				if (filePath.equals("")) {
-                    PluginResult r = new PluginResult(PluginResult.Status.ERROR);
-                    callbackContext.sendPluginResult(r);
+          PluginResult r = new PluginResult(PluginResult.Status.ERROR);
+          callbackContext.sendPluginResult(r);
 					return true;
 				}
 
 				File file = new File(filePath);
 
-				Intent scanIntent = new Intent(
-						Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+				Intent scanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
 				scanIntent.setData(Uri.fromFile(file));
 
 				Context context = webView.getContext();
 				context.sendBroadcast(scanIntent);
 			}
 
-            PluginResult r = new PluginResult(PluginResult.Status.OK);
-            callbackContext.sendPluginResult(r);
-            return true;
+      PluginResult r = new PluginResult(PluginResult.Status.OK);
+      callbackContext.sendPluginResult(r);
+      return true;
 
 		} catch (JSONException e) {
 
-            PluginResult r = new PluginResult(PluginResult.Status.JSON_EXCEPTION);
-            callbackContext.sendPluginResult(r);
-            return true;
+      PluginResult r = new PluginResult(PluginResult.Status.JSON_EXCEPTION);
+      callbackContext.sendPluginResult(r);
+      return true;
 
 		} catch (Exception e) {
 
-            PluginResult r = new PluginResult(PluginResult.Status.ERROR);
-            callbackContext.sendPluginResult(r);
-            return true;
+      PluginResult r = new PluginResult(PluginResult.Status.ERROR);
+      callbackContext.sendPluginResult(r);
+      return true;
 		}
-
 	}
 
 	private String checkFilePath(String filePath) {
+
 		String return_value = "";
+
 		try {
+
 			return_value = filePath.replaceAll("^file://", "");
 
 		} catch (Exception e) {
+
 			System.out.println("Error with the filePath");
+      
 		}
 
 		return return_value;

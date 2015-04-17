@@ -5,18 +5,15 @@ var RefreshMedia = function() {
 };
 
 RefreshMedia.prototype.refresh = function(url) {
-	alert(url);
 	exec(success, error, "PluginRefreshGallery", "refresh", [url]);
 };
 
 var success = function(success){
-	alert("Success");
-	alert(success);
+	//alert("Success");
 },
 
 error = function(error){
-	alert("Error");
-	alert(error);
+	//alert("Error");
 };
 
 window.refreshMedia = new RefreshMedia();
