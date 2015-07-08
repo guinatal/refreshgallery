@@ -10,7 +10,7 @@ You just need to include the following line in the config.xml
 <gap:plugin name="com.guinatal.refreshgallery" />
 ```
 
-After that, you just need to call the method to refresh the image gallery.
+After that, you invoke the method to refresh the image gallery.
 
 ```javascript
 refreshMedia.refresh(path);
