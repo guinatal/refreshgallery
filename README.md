@@ -7,7 +7,7 @@ I've created this plugin because when you save an image on android device, this 
 You just need to include the following line in the config.xml
 
 ```xml
-<gap:plugin name="com.guinatal.refreshgallery" />
+<plugin name="com.guinatal.refreshgallery" spec="1.0.9" source="pgb" />
 ```
 
 After that, you invoke the method to refresh the image gallery.
