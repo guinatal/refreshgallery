@@ -47,8 +47,6 @@ window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, function (fileSystem) {
 });
 ```
 
-![Album](http://blog.guinatal.com/wp-content/uploads/2015/04/album.jpg)
-
 ## Contribute
 
 Contributions are welcome.
